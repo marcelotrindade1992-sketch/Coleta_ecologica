@@ -3,22 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coleta Ecológica</title>
+    <meta name="description" content="Painel demonstrativo da plataforma Coleta Ecológica.">
+    <title>Coleta Ecológica | Painel</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Navegação principal">
+            <a class="brand" href="#inicio" aria-label="Coleta Ecológica - início"><span class="brand-mark" aria-hidden="true">♻</span><span>Coleta<br><strong>Ecológica</strong></span></a>
+            <nav>
+                <a class="nav-link active" href="#inicio" aria-current="page"><span aria-hidden="true">⌂</span> Painel</a>
+                <a class="nav-link" href="#votacao"><span aria-hidden="true">◉</span> Votação</a>
+                <a class="nav-link" href="#cronograma"><span aria-hidden="true">▣</span> Cronograma</a>
+                <a class="nav-link" href="#regioes"><span aria-hidden="true">⌖</span> Regiões</a>
+            </nav>
+            <div class="sidebar-footer"><span class="avatar" aria-hidden="true">ME</span><div><strong>Marcelo Estrela</strong><small>Morador</small></div></div>
+        </aside>
 
-    <h1>Coleta Ecológica</h1>
+        <main id="inicio">
+            <header class="topbar">
+                <div><p class="eyebrow">PAINEL DO MORADOR</p><h1>Olá, Marcelo! <span aria-hidden="true">👋</span></h1><p class="intro">Acompanhe as decisões e os próximos dias de coleta no seu bairro.</p></div>
+                <button class="profile-button" type="button" aria-label="Abrir perfil de Marcelo Estrela"><span class="avatar">ME</span><span>Minha conta</span></button>
+            </header>
+            <section class="notice" aria-label="Aviso importante"><span class="notice-icon" aria-hidden="true">♻</span><div><strong>Votação aberta para novembro</strong><p>Ajude a definir o melhor horário para a coleta seletiva da sua região.</p></div><a href="#votacao">Participar <span aria-hidden="true">→</span></a></section>
 
-    <p>
-        Ajude a definir os melhores horários de coleta
-        de materiais recicláveis no seu bairro.
-    </p>
+            <section aria-labelledby="resumo-titulo">
+                <div class="section-heading"><div><p class="eyebrow">VISÃO GERAL</p><h2 id="resumo-titulo">Resumo da comunidade</h2></div><span class="sample-tag">Dados de exemplo</span></div>
+                <div class="summary-grid" id="summaryCards" aria-live="polite"></div>
+            </section>
 
-    <button id="btnIniciar">Participar da votação</button>
+            <div class="content-grid">
+                <section class="panel voting-panel" id="votacao" aria-labelledby="votacao-titulo">
+                    <div class="panel-header"><div><p class="eyebrow">CONSULTA EM ANDAMENTO</p><h2 id="votacao-titulo">Resultado parcial da votação</h2></div><a href="#votacao">Ver detalhes</a></div>
+                    <p class="panel-description">Qual horário funciona melhor para a coleta na Associação de Moradores / Rafael Alto?</p>
+                    <div class="vote-result" id="voteResults" aria-live="polite"></div><p class="update-note">Atualizado hoje às 09:30 - informação fictícia para demonstração.</p>
+                </section>
+                <section class="panel schedule-panel" id="cronograma" aria-labelledby="cronograma-titulo">
+                    <div class="panel-header"><div><p class="eyebrow">PRÓXIMAS COLETAS</p><h2 id="cronograma-titulo">Seu cronograma</h2></div><a href="#cronograma">Ver calendário</a></div>
+                    <div class="schedule-list" id="scheduleList" aria-live="polite"></div>
+                </section>
+            </div>
 
+            <section class="panel region-panel" id="regioes" aria-labelledby="regioes-titulo">
+                <div class="region-copy"><p class="eyebrow">SUA REGIÃO</p><h2 id="regioes-titulo">Rafael Alto</h2><p>Veja os pontos de referência usados na votação e no planejamento da rota.</p><button class="secondary-button" type="button">Consultar pontos de coleta</button></div>
+                <div class="map-placeholder" role="img" aria-label="Mapa ilustrativo da região Rafael Alto com ponto de coleta selecionado"><span class="map-road road-one"></span><span class="map-road road-two"></span><span class="map-road road-three"></span><span class="map-pin">●</span><span class="map-label">Ponto de coleta<br><strong>Rafael Alto</strong></span><span class="map-caption">Mapa ilustrativo - sem dados geográficos reais</span></div>
+            </section>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
