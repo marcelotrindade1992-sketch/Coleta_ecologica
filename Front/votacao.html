@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
     <div class="app-shell">
         <aside class="sidebar" aria-label="Navegação principal">
             <a class="brand" href="index.html" aria-label="Coleta Ecológica - painel"><span class="brand-mark" aria-hidden="true">♻</span><span>Coleta<br><strong>Ecológica</strong></span></a>
@@ -20,7 +21,7 @@
             <div class="sidebar-footer"><span class="avatar" aria-hidden="true">ME</span><div><strong>Marcelo Estrela</strong><small>Morador</small></div></div>
         </aside>
 
-        <main>
+        <main id="conteudo" tabindex="-1">
             <header class="topbar">
                 <div><p class="eyebrow">PARTICIPAÇÃO DA COMUNIDADE</p><h1>Escolha um horário</h1><p class="intro">Sua resposta ajuda a organizar a coleta seletiva no bairro.</p></div>
                 <a class="back-link" href="index.html">← Voltar ao painel</a>
@@ -36,7 +37,7 @@
                             <legend>Selecione apenas uma opção</legend>
                             <div class="vote-options" id="voteOptions"></div>
                         </fieldset>
-                        <button class="primary-button" type="submit">Confirmar voto</button>
+                        <button class="primary-button" type="submit">Confirmar voto de demonstração</button>
                     </form>
                     <p class="form-message" id="formMessage" aria-live="polite"></p>
                 </article>

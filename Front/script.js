@@ -1,4 +1,4 @@
-/* Dados demonstrativos. Em uma próxima etapa, poderão vir de uma API Node.js. */
+
 const dashboardData = {
     summary: [
         { icon: "◉", label: "Votos registrados", value: "248", detail: "+18 nesta semana" },

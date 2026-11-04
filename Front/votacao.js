@@ -1,4 +1,4 @@
-/* Dados fictícios. A API Node.js poderá substituir este objeto futuramente. */
+
 const votingData = {
     options: [
         { id: "morning", time: "08h - 10h", description: "Ideal para quem fica em casa pela manhã." },
@@ -29,9 +29,12 @@ function render() {
 document.querySelector("#voteForm").addEventListener("submit", (event) => {
     event.preventDefault();
     const selected = document.querySelector("input[name='collectionTime']:checked");
-    document.querySelector("#formMessage").textContent = selected
-        ? `Voto de demonstração registrado: ${selected.value}.`
-        : "Escolha um horário antes de confirmar.";
+    if (!selected) {
+        document.querySelector("#formMessage").textContent = "Escolha um horário antes de confirmar.";
+        return;
+    }
+
+    window.location.href = `confirmacao.html?horario=${encodeURIComponent(selected.value)}`;
 });
 
 render();
