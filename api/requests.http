@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:3000
+
+### Verificar se a API está disponível
+GET {{baseUrl}}/health
+
+### Listar todos os votos
+GET {{baseUrl}}/api/votos
+
+### Registrar um voto
+POST {{baseUrl}}/api/votos
+Content-Type: application/json
+
+{
+  "enquete_id": 1,
+  "opcao_enquete_id": 1,
+  "usuario_id": 1
+}
