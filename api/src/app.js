@@ -1,12 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const votosRoutes = require('./routes/votos.routes');
+const recursosRoutes = require('./routes/recursos.routes');
+const usuariosRoutes = require('./routes/usuarios.routes');
 const errorHandler = require('./middlewares/errorHandler');
 const app = express();
 app.use(cors({ origin: process.env.CORS_ORIGIN || 'http://127.0.0.1:5500' }));
 app.use(express.json());
 app.get('/health', (request, response) => response.status(200).json({ status: 'ok' }));
 app.use('/api/votos', votosRoutes);
+app.use('/api', recursosRoutes);
+app.use('/api/usuarios', usuariosRoutes);
 app.use((request, response) => response.status(404).json({ error: 'Rota não encontrada.' }));
 app.use(errorHandler);
 module.exports = app;

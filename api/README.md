@@ -5,7 +5,7 @@ API Express para registrar e consultar votos da enquete de horários de coleta.
 ## Configuração
 
 
-No arquivo `.env`, informe a senha do PostgreSQL
+No arquivo `exemplo.env`, informe a senha do PostgreSQL
 
 ## Criar o banco pelo pgAdmin
 

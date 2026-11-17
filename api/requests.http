@@ -6,6 +6,9 @@ GET {{baseUrl}}/health
 ### Listar todos os votos
 GET {{baseUrl}}/api/votos
 
+### Buscar um voto
+GET {{baseUrl}}/api/votos/1
+
 ### Registrar um voto
 POST {{baseUrl}}/api/votos
 Content-Type: application/json
@@ -15,3 +18,26 @@ Content-Type: application/json
   "opcao_enquete_id": 1,
   "usuario_id": 1
 }
+
+### Atualizar a opção de um voto
+PUT {{baseUrl}}/api/votos/1
+Content-Type: application/json
+
+{
+  "opcao_enquete_id": 2
+}
+
+### Excluir um voto
+DELETE {{baseUrl}}/api/votos/1
+
+### Recursos de apoio
+GET {{baseUrl}}/api/regioes
+
+###
+GET {{baseUrl}}/api/horarios-coleta?regiao_id=1
+
+###
+GET {{baseUrl}}/api/enquetes?status=ativa
+
+###
+GET {{baseUrl}}/api/enquetes/1/opcoes

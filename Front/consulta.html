@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta pública de resultados da Coleta Ecológica.">
+    <title>Coleta Ecológica | Consulta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Navegação principal">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">♻</span>
+                <span>Coleta<br><strong>Ecológica</strong></span>
+            </a>
+
+            <nav>
+                <a class="nav-link" href="index.html"><span aria-hidden="true">⌂</span> Painel</a>
+                <a class="nav-link" href="cadastro.html"><span aria-hidden="true">+</span> Cadastro</a>
+                <a class="nav-link" href="votacao.html"><span aria-hidden="true">◉</span> Votação</a>
+                <a class="nav-link active" href="consulta.html" aria-current="page"><span aria-hidden="true">▣</span> Consulta</a>
+            </nav>
+        </aside>
+
+        <main id="conteudo" tabindex="-1">
+            <header class="topbar consultation-header">
+                <div>
+                    <p class="eyebrow">TRANSPARÊNCIA DA COMUNIDADE</p>
+                    <h1>Consulta pública</h1>
+                    <p class="intro">
+                        Consulte os resultados e acompanhe a participação dos moradores na votação.
+                    </p>
+                </div>
+
+                <a class="back-link" href="votacao.html">← Ir para votação</a>
+            </header>
+
+            <section class="consultation-hero" aria-labelledby="consulta-titulo">
+                <div>
+                    <span class="consultation-icon" aria-hidden="true">▦</span>
+                    <p class="eyebrow">RESULTADOS DA VOTAÇÃO</p>
+                    <h2 id="consulta-titulo">Consulte a votação ativa</h2>
+                    <p>Confira os horários escolhidos e os resultados da comunidade.</p>
+                </div>
+
+                <button class="primary-button search-button" id="searchButton" type="button">
+                    Buscar resultado da votação
+                </button>
+            </section>
+
+            <section class="panel consultation-result"
+                     id="resultPanel"
+                     hidden
+                     aria-live="polite">
+
+                <div class="panel-header">
+                    <div>
+                        <p class="eyebrow">ENQUETE ATIVA</p>
+                        <h2 id="consultaTitulo">Resultado da consulta</h2>
+                    </div>
+
+                    <span class="result-badge" id="totalVotes">0 votos</span>
+                </div>
+
+                <p class="panel-description" id="consultaDescription"></p>
+
+                <div class="consultation-cards" id="consultaResults"></div>
+            </section>
+
+            <p class="form-message consultation-message"
+               id="consultaMessage"
+               aria-live="polite">
+                Clique em “Buscar resultado da votação” para iniciar a consulta.
+            </p>
+        </main>
+    </div>
+
+    <script src="consulta.js"></script>
+</body>
+</html>
+
